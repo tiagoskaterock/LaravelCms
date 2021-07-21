@@ -24,7 +24,6 @@ class HomeController extends Controller
      */
     public function index()
     {
-
         $posts = Post::orderBy('id', 'DESC')->get();
 
         return view('home', ['posts' => $posts]);
