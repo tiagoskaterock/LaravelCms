@@ -10,8 +10,8 @@
 			</div>
 
 			<div class="form-group">
-				<label for="post-image">File</label>
-				<input class="form-control-file" type="file" name="post-image" id="post-image"></input>
+				<label for="post_image">File</label>
+				<input class="form-control-file" type="file" name="post_image" id="post_image"></input>
 			</div>
 
 			<div class="form-group">

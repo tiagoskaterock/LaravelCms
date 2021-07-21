@@ -16,15 +16,19 @@ class PostController extends Controller
         return view('admin.posts.create');
     }
 
-    public function store() {        
+    public function store(Request $request) {        
         $inputs = request()->validate([
             'title' => 'required|min:8|max: 255',
             'post_image' => 'file',
             'body' => 'required'
         ]);  
         
-        if (request('post_imagem')) {
-            $inputs['post_imagem'] = request('post_image')->stores('images');
+        if (request('post_image')) {
+            $inputs['post_image'] = request('post_image')->store('images');
         }
+
+        auth()->user()->posts()->create($inputs);
+
+        return back();
     }
 }
