@@ -11,4 +11,13 @@ class PostController extends Controller
 
         return view('post', ['post' => $post]);
     }
+
+    public function create() {
+        return view('admin.posts.create');
+    }
+
+    public function store() {
+        auth()->user();
+        return view('admin.posts.create');
+    }
 }
