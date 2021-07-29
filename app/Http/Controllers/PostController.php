@@ -15,6 +15,10 @@ class PostController extends Controller
         return view('admin/posts/create');
     }
 
+    public function index() {
+        return view('admin.posts.index');
+    }
+
     public function store() {   
 
         $inputs = request()->validate([
