@@ -18,6 +18,9 @@
   <!-- Custom styles for this template-->
   <link href="{{asset('css/sb-admin-2.min.css')}}" rel="stylesheet">
 
+  <!-- tiago stuff -->
+  <link href="{{asset('css/tiago.css')}}" rel="stylesheet">
+
 </head>
 
 <body id="page-top">

@@ -16,7 +16,10 @@ class PostController extends Controller
     }
 
     public function index() {
-        return view('admin.posts.index');
+
+        $posts = Post::orderBy('id', 'desc')->get();
+        // $posts = Post::all();
+        return view('admin.posts.index', ['posts' => $posts]);
     }
 
     public function store() {   
