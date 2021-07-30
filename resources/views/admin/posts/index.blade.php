@@ -17,7 +17,7 @@
 								<th>Use Id</th>
 								<th>Title</th>
 								<th>Post Image</th>
-								<th>Body</th>
+								<th>Created by</th>
 								<th>Created at</th>
 								<th>Updated at</th>
 							</tr>
@@ -30,7 +30,7 @@
 								<th>{{$post->user_id}}</th>
 								<th>{{$post->title}}</th>
 								<th><img class="img_admin" src="/storage/{{$post->post_image}}" alt="Post image"></th>
-								<th>{{$post->body}}</th>
+								<th>{{$post->user->name}}</th>
 								<th>{{$post->created_at->diffForHumans()}}</th>
 								<th>{{$post->updated_at->diffForHumans()}}</th>
 							</tr>
